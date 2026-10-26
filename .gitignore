@@ -1,0 +1,21 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+
+
+# Local datasets
+data/*.csv
+
+# Local databases
+*.db
+
+# macOS files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Python cache
+__pycache__/
+*.pyc
