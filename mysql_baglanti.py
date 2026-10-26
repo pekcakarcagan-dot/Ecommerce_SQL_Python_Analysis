@@ -1,12 +1,17 @@
-import mysql.connector 
-from getpass import getpass
-sifre=getpass("MYSQL şifrenizi girin:")
-baglanti= mysql.connector.connect(
+
+import mysql.connector
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+baglanti = mysql.connector.connect(
     host="localhost",
-    user="root",
-    password=sifre,
+    user=os.getenv("MYSQL_USER"),
+    password=os.getenv("MYSQL_PASSWORD"),
     database="ecommerce_analysis"
- )
+)
+
 
 print("MYSQL bağlantısı başarılı!")
 import pandas as pd
